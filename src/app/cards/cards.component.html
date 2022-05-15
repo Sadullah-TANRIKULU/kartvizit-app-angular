@@ -1,0 +1,20 @@
+<main>
+    <div class="d-flex align-items-center">
+        <div class="flex-grow-1">
+            <h1 class="page-title">Kartvizitler</h1>
+            <p class="page-description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum dolorum tempore sint accusamus minus
+                ipsaatque.
+            </p>
+        </div>
+            <button mat-flat-button color="primary" (click)="openAddCardModal()">Yeni Kartvizit</button>
+    </div>
+    <hr>
+
+        <div class="cards">
+            <div class="col-12 col-md-4 col-lg-3" *ngFor="let card of cardService.cards">
+                <app-card-item [card]="card"></app-card-item>
+            </div>
+        </div>
+    
+</main>
