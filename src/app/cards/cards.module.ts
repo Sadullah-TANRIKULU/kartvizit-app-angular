@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { CardsRoutingModule } from './cards-routing.module';
 import { CardsComponent } from './cards.component';
 import {MatCardModule} from '@angular/material/card';
@@ -10,7 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { CardModalComponent } from './card-modal/card-modal.component';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatProgressBarModule
     
   ]
 })

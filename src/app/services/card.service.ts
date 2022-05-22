@@ -10,7 +10,7 @@ export class CardService {
 
   cards!: Card[];
 
-  // apiUrl: string = 'https://jsonplaceholder.typicode.com'            'http://demo.limantech.com/cards/public/api/' videodaki api
+  // apiUrl: string = 'https://jsonplaceholder.typicode.com' +'/users'            'http://demo.limantech.com/cards/public/api/' +'/cards' videodaki api
 
   constructor(
     @Inject('apiUrl') private apiUrl: string,  // bu şekilde inject etmesek sol üstteki gibi kullanmak gerekiyordu.
@@ -19,22 +19,22 @@ export class CardService {
     ) { }
 
   getCards(): void {
-    this.http.get<Card[]>(this.apiUrl + '/users')
+    this.http.get<Card[]>(this.apiUrl + '/cards')
     .subscribe((res: Card[]) => {
       this.cards = res;
     })
   }
 
   addCard(card: Card): Observable<any> {
-    return this.http.post(this.apiUrl + '/users', card);
+    return this.http.post(this.apiUrl + '/cards', card);
   }
 
 
   updateCard(card: Card, cardId: number): Observable<any> {
-    return this.http.put(this.apiUrl + '/users/' + cardId, card);
+    return this.http.put(this.apiUrl + '/cards/' + cardId, card);
   }
 
   deleteCard(cardId: number): Observable<any> {
-    return this.http.delete(this.apiUrl + '/users/' + cardId);
+    return this.http.delete(this.apiUrl + '/cards/' + cardId);
   }
 }

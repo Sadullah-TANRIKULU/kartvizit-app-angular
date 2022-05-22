@@ -15,6 +15,16 @@ main {
     }
 }
 
+mat-snack-bar-container {
+    color: #fff;
+    &.success {
+        background-color: #198754;
+    }
+    &.error {
+        background-color: #dc3545;
+    }
+}
+
 
 
 

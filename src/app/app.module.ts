@@ -9,6 +9,7 @@ import { AboutComponent } from './components/about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {HttpClientModule} from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -24,12 +25,13 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
+    MatSnackBarModule,
   ],
   providers: [
     {
       provide: 'apiUrl',   //  her service için ayrıca tanımlamamak için buraya yazmak işin kısayolu, sonra service içinde @inject ile çağrılabilir.
-      useValue: 'https://jsonplaceholder.typicode.com'  // https://gatesopenresearch.org/extapi   open source api data edit için dene!
-    },
+      useValue: 'https://demo.limantech.com/cards/public/api'  // https://gatesopenresearch.org/extapi   open source api data edit için dene!
+    },                                                         // apiUrl: string = 'https://jsonplaceholder.typicode.com' +'/users'  bu da kullanılabilir
   ],
   bootstrap: [AppComponent]
 })
